@@ -1,50 +1,64 @@
-# Money for Books: Instructions
+# Individual Project: Rock Paper Scissors
 
-Write a program that tells users if they have enough money to buy their desired number of books. 
+In this assignment, you'll recreate the classic game of rock, paper, scissors. 
 
-Each book costs $20. The program should ask the user to enter how many books they want to buy, and how much money they have.
+If you’ve never played before, or need a refresher: two players each choose Rock, Paper, or Scissors. They show their choice at the same time. Depending on their choice, there’s a win, lose, or draw. 
 
-The program will then let the user know if they have enough money to buy the books. Or, if they don't have enough, it will let them know how much more is needed.
+- Rock smashes Scissors
+- Scissors cut Paper
+- Paper covers Rock
+- If the two choices are the same, it’s a draw
+- Rock, Paper, and Scissors are the only choices allowed.
 
-If they have enough, print:
+## Your Task
 
-```
-You have enough money, go for it!
-```
+### Getting started
 
-If they need $12 more to buy the books, print:
+Here are the basic steps:
 
-```
-You need $12 more to buy that number of books
-```
+- Set a value for the computer player
+- Get user input for Rock, Paper, or Scissors
+- Use `if` statements to print the right message, based on the computer and player choices
 
-If they need more or less than 12, print however much they need.
+Try playing your Rock, Paper, Scissors game, and make sure that it works for all the different inputs. There are a lot of `if` statements to write.
 
-## Expected Results
+**Be aware**: the user might not type in exactly “Rock” “Paper” or “Scissors”. Your code should handle that case nicely, and should not error.
 
-Here's what running the program should look like when complete ([link to video](https://www.loom.com/share/68a8c1882238478ab3bac31551398319))
+**Sample Runs**
 
-With enough money:
-```
-How many books do you want to buy? 4
-How much money do you have? 100
-You have enough money, go for it!
-```
+![loss with scissors](assets/16BF5CF2-9D49-4E67-8509-31C57D7067EA-2037-00027F9983AC9F09.png)
 
-Without enough money:
-```
-How many books do you want to buy? 2
-How much money do you have? 16
-You need $24 more to buy that number of books
-```
+![victory with rock](assets/7F714F44-419A-47C3-9E07-20E5C185C51F-2037-00027F9AFF0B82E8.png)
 
-## Steps
+![draw with rock](assets/D741C704-CECD-4FD8-B07A-CEB6598984F5-2037-00027F9A455E10C6.png)
 
-- Ask the user to enter desired number of books and money
-- Store the values the user enters in appropriately named variables
-- Use an if/else statement to show the user a different response, depending on the calculations on what they entered.
+![invalid input](assets/F8828E99-37DB-481E-9251-39D833020B3D-2037-00027F985B0C720F.png)
 
-## Hints
+- Use `random` to randomize the computer choice. The computer player should choose randomly between Rock, Paper, and Scissors.
 
-* Be mindful of the string you print out! The tests are picky. 
-* Copy and paste instead of typing it out, so that it's exactly the same.
+### Test and Submit
+Once you finish coding the section above, you should:
+
+1. Play your game, and make sure that it’s working for all the different inputs. It’s not fun if the conditionals don’t work, because it feels like the game is broken.
+
+2. Click “Submit”
+
+## Rubric
+
+There aren't any test cases for this assignment. Instead, you'll have to check that it works for yourself.
+
+- [ ]  The program prints out instructions for the user
+- [ ]  The program prints out a different message, based on which choices the user and computer player made
+- [ ]  The program runs without errors, even if the user types in the wrong thing
+
+If you checked off all these boxes, your Rock, Paper, Scissors game is up to scratch!
+
+If it doesn't meet these criteria, keep trying, and remember that you can ask for help. You should submit your work for feedback, whether or not you have checked off everything on this checklist.
+
+
+## Remember...
+
+- **Plan** before you code
+- **Debug** if you aren't getting the desired output
+- **Attend** office hours if you need additional support
+- **G**o **C**limb **K**ibo!
