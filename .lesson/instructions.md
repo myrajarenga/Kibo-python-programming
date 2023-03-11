@@ -1,15 +1,34 @@
-# Loop Debugging With Print: Instructions  
- 
-Practice debugging a loop by adding print statements.
+# Print Multiples: Instructions
 
-The code is supposed to solve this challenge:
+Write a program that prints the numbers from 1 to 100.
 
-> _Print the sum of the odd numbers between 10 and 25_
+Follow these rules:
 
-But it's not correct.
+1. If the number is a multiple of three, print `X is a multiple of 3`
+2. Otherwise, if the number is a multiple of 5, the program should print `X is a multiple of 5`
+3. Otherwise, just print the number.
 
-You don't need to fix the code - just figure out what the bug is using `print`. 
+For the 'X' in rules 1 and 2, print the number, not 'X', so if the number was 42, then `42 is a multiple of 3`.
 
-* Add `print` before, during, and after the loop.
-* Run the code to see the results
-* When you figure out what's wrong with the loop, write the bug in comments at the end of the file.
+## Expected Results
+
+Run your program and check that it is working correctly. There are no unit tests to check your work for you.
+
+Here's what the first ten lines of output should look like:
+
+```
+1
+2
+3 is a multiple of 3
+4
+5 is a multiple of 5
+6 is a multiple of 3
+7
+8
+9 is a multiple of 3
+10 is a multiple of 5
+```
+
+## Extension
+
+If the number is multiple of both 3 and 5, print "X is a multiple of 3 and 5" instead.
