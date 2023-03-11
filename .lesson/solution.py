@@ -1,8 +1,10 @@
-# Ask for the exam score
-exam_score = int(input("What is your score? "))
+books = int(input("How many books do you want to buy? "))
+money = int(input("How much money do you have? "))
 
-# Check to see if the score is > 70
-if exam_score > 70:
-  print("You passed!")
+cost = books * 20
+
+if money >= cost:
+  print("You have enough money, go for it!")
 else:
-  print("Try again")
+  difference = cost - money
+  print("You need $" + str(difference) + " more to buy that number of books")
