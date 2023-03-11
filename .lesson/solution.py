@@ -1,13 +1,24 @@
-# Print numbers 1 to 100
-for i in range(1,101):
-  # For multiples of both 3 and 5, print "X is a multiple of 3 and 5"
-  if i % 3 == 0 and i % 5 == 0:
-    print(i, "is a multiple of 3 and 5")
-  # For multiples of 3, print "X is a multiple of 3"
-  if i % 3 == 0:
-    print(i, "is a multiple of 3 and 5")
-  # For multiples of 5, print "X is a multiple of 5"
-  elif i % 5 == 0:
-    print(i, "is a multiple of 5")
+print("Generate the scrabble score for a word.")
+word = input("Enter a word: ")
+
+score = 0
+
+for letter in word:
+  if letter in 'aeilnorstu':
+    score += 1
+  elif letter in 'dg':
+    score += 2
+  elif letter in 'bcmp':
+    score += 3
+  elif letter in 'fhvwy':
+    score += 4
+  elif letter in 'k':
+    score += 5
+  elif letter in 'jx':
+    score += 8
+  elif letter in 'qz':
+    score += 10
   else:
-    print(i)
+    score += 0
+
+print(f"{word} has a scrabble score of {score}")
