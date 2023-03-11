@@ -3,7 +3,7 @@
 animals = ["Lion", "Elephant", "Leopard", "Rhino", "Buffalo"]
 
 print("Enter a number to read a description of an animal.")
-for (i, animal) in enumerate(animals):
+for (i, animal) in enumerate(animals):#[(1, Lion), (2,Elephant), ].  [1,2,3,4]
   print(f"{i+1}. {animal}")
 
 # The descriptions are somewhat long, scroll past them
@@ -17,7 +17,20 @@ descriptions = [
 ]
 
 # Write your solution below
-selection = int(input("Choose an animal: "))
-index = selection - 1
-print(animals[index])
-print(descriptions[index])
+
+while True:  
+  try:
+    number = int(input('Choose an animal: '))
+    if number > 0 and number < 6:
+      print(animals[number-1])
+      print(descriptions[number-1])
+      break
+    else:
+      print("Enter a number from the given list")
+      continue
+  except:
+    print("Enter a valid number")
+    continue
+    
+  
+

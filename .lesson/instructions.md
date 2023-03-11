@@ -1,62 +1,65 @@
-# Guess My Number: Instructions
+# Safari Animals: Instructions
 
-In this project, you'll build a number guessing game.
+Write a program to print out the description of safari animal, based on user input.
 
-The program will set a hidden number, and the user will try to guess what it is. The program will tell them if their guess is too high or too low, and it will stop and congratulate them when they eventually guess the number correctly.
+## Your Task
+
+In the starter code, there's a list of safari animals, and a list of descriptions. There's also a loop that prints out each of the animal names and numbers. (See 'Starter Code' section below.)
+
+Prompt the user to type in a number. Based on the number they type in, show the name and description of that animal.
 
 ## Expected Results
 
-Here's a snapshot of what a full game might look like:
-
-![gameplay of the secret number game](secret_number_gameplay.png)
-
-Or like this, with another number:
+Here's a transcript of a successful run of the program:
 
 ```
-I'm thinking of a number between 1 and 99
-Enter a guess: 45
-Your guess is too high
-Enter a guess: 25
-Your guess is too high
-Enter a guess: 10
-Your guess is too low
-Enter a guess: 18
-Your guess is too high
-Enter a guess: 14
-Your guess is too low
-Enter a guess: 16
-Your guess is too high
-Enter a guess: 15
-Congrats! The number was 15
+Enter a number to read a description of an animal.
+1. Lion
+2. Elephant
+3. Leopard
+4. Rhino
+5. Buffalo
+Choose an animal: 1
+Lion
+The lion (Panthera leo) is a large mammal of the Felidae (cat) family. Some large males weigh over 250 kg (550 lb). Today, wild lions live in sub-Saharan Africa and in Asia. Lions are adapted for life in grasslands and mixed areas with trees and grass. The relatively small females are fast runners over short distances, and coordinate their hunting of herd animals.
 ```
 
-There are no unit tests, so you'll have to check for yourself if the program is working.
+## Rubric
 
-## Your Task
-### Part 1: High or Low
+Run the tests to verify that your program is correct. It should print out the right animal name and description, based on the value that the user typed in.
 
-To start:
+You should also run your code and see for yourself that the program works. The tests can help check your work, but they aren't perfect.
 
-1. Assign a secret number variable. Just pick a number for now.
-2. Prompt the user to enter a number
-3. Using `if`, `elif`, and `else`, print an appropriate message based on the user's guess. Let them know if their guess is too low, too high, or correct.
+## Hints
 
-Run your program to confirm that it's working. Be sure to try out numbers that are higher, lower, and equal to the secret number.
+Remember - list indices start at `0`. But, the user will type in the number of the animal, starting with `1`. So, you'll have to convert from the number to the list index.
 
-### Part 2: Loop
+## Starter Code
 
-Now that you have the conditional logic working, you can make the rest of the game work.
+Lines 6 and 7 of the starter code list the animals, with numbers next to each animal.
 
-1. Add a `while` loop around your code that prompts for the guess and checks the guess. (Be sure to fix the indentation to put the `if` / `elif` / `else` blocks inside the `while` loop.)
-2. Add a `break` statement after the user guesses the correct value.
-3. Import the `random` library, and use `random.randint()` to set your secret number.
+```
+for (i, animal) in enumerate(animals):
+  print(f"{i+1}. {animal}")
+```
 
-Test your game again, to make sure that it works as you expect. 
+`enumerate` is a new function. It takes a list like `animals`, and turns it into a list with the elements and the index of each element. Then, the `for` loop has two loop variables:
 
-### Protect from errors
+- `i` is the index (`0`, `1`, `2`, `3`, `4`)
+- `animal` is the string (`"Lion"`, `"Elephant"`, `"Leopard"`, `"Rhino"`, `"Buffalo"`)
 
-If the user enters a guess that isn't a number, the game should warn them and continue, instead of exiting with an error. You can use `str.isdecimal` to check that a string contains only decimal numbers.
+So the loop prints out the animals and the numbers. 
 
-Be sure to run your program again to confirm that it still works after adding this feature.
+```
+1. Lion
+2. Elephant
+3. Leopard
+4. Rhino
+5. Buffalo
+```
 
-![screenshot demonstrating message "that's not a number"](not_a_number.png)
+`enumerate` is a handy function if you need the index of when you're looping over the elements of a list with `for`.
+
+## Credits
+
+Descriptions from Wikipedia.
